@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="logo.png" type="image/png">
+    <title>Security Shield</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            touch-action: manipulation;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        nav {
+            background-color: #1a1a1a;
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .beta-tag {
+            color: white;
+            background-color: #FF0000;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .dropdown {
+            position: relative;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .dropdown img {
+            height: 40px;
+            -webkit-user-drag: none;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .dropdown-menu img {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 5px;
+            -webkit-user-drag: none;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .dropdown-menu {
+            border-radius: 10px;
+            animation: fadeInDown 0.5s ease;
+        }
+
+        .dropdown-menu a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown-menu img:hover {
+            transform: scale(1.2);
+        }
+
+        .container {
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .features-section {
+            background-color: #fff;
+            overflow: hidden;
+            position: relative;
+            border-radius: 20px;
+            margin-top: 20px;
+            padding: 30px;
+        }
+
+        .feature-explanation {
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .feature-explanation img {
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        .feature-details {
+            flex: 1;
+        }
+
+        .btn-primary {
+            background-color: #1a1a1a;
+            border: none;
+            padding: 15px 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #333;
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            margin-top: 20px;
+        }
+
+        .footer-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-buttons a {
+            margin: 0 20px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-buttons a:hover {
+            color: #ddd;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="dropdown">
+            <img src="menu_button.png" alt="Menu" data-toggle="dropdown" />
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="generator.html"><img src="password_generator.png" alt="Generator" /> Générateur de Mot de Passe</a>
+                <a class="dropdown-item" href="#"><img src="password_strength.png" alt="Strength" /> Vérifier la Force d'un Mot de Passe</a>
+                <a class="dropdown-item" href="#"><img src="password_manager.png" alt="Manager" /> Gestionnaire de Mot de Passe</a>
+            </div>
+        </div>
+        <span class="beta-tag">BETA</span>
+    </nav>
+
+    <div class="container">
+        <h1>Bienvenue sur Security Shield</h1>
+        <p>Security Shield vous offre une sécurité robuste pour vos mots de passe. Protégez vos informations sensibles avec nos fonctionnalités avancées.</p>
+    </div>
+
+    <div class="features-section">
+        <div class="container">
+            <h2>Nos Fonctionnalités</h2>
+            <div class="feature-explanation">
+                <img src="password_generator.png" alt="Generator" />
+                <div class="feature-details">
+                    <h3>Générateur de Mot de Passe</h3>
+                    <p>Créez des mots de passe forts et uniques en utilisant notre générateur avancé. Assurez-vous que vos comptes en ligne sont sécurisés.</p>
+                    <a class="btn btn-primary" href="generator.html">Découvrir</a>
+                </div>
+            </div>
+            <div class="feature-explanation">
+                <img src="password_strength.png" alt="Strength" />
+                <div class="feature-details">
+                    <h3>Vérifier la Force d'un Mot de Passe</h3>
+                    <p>Évaluez la robustesse de vos mots de passe actuels. Nous analysons et fournissons des recommandations pour renforcer votre sécurité.</p>
+                    <a class="btn btn-primary" href="#">Découvrir</a>
+                </div>
+            </div>
+            <div class="feature-explanation">
+                <img src="password_manager.png" alt="Manager" />
+                <div class="feature-details">
+                    <h3>Gestionnaire de Mot de Passe</h3>
+                    <p>Stockez vos mots de passe en toute sécurité et accédez-y facilement. Simplifiez la gestion de vos informations de connexion.</p>
+                    <a class="btn btn-primary" href="#">Découvrir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-buttons">
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+            <a href="#">Conditions d'Utilisation</a>
+            <a href="#">Conditions Générales</a>
+        </div>
+        <p>&copy; 2024 Security Shield. Tous droits réservés.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('.container').style.opacity = 1;
+            document.querySelector('.container').style.transform = 'none';
+            document.querySelector('.features-section').style.opacity = 1;
+            document.querySelector('.features-section').style.transform = 'none';
+            document.querySelector('.footer').style.opacity = 1;
+            document.querySelector('.footer').style.transform = 'none';
+        });
+    </script>
+</body>
+</html>
